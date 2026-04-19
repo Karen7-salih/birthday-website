@@ -10,94 +10,94 @@ function App() {
 
   return (
     <main className="page-shell">
-      <section className="hero-section">
-        <div className="hero-badge">Happy Birthday Surprise</div>
-
+      <section className="hero-section hero-section--main">
         <h1 className="hero-title">
-          To My Best Friend
-          <span>this whole day is for you ♡</span>
+          For Jojo
+          <span>a little birthday world made with love ♡</span>
         </h1>
 
         <p className="hero-text">
-          A little birthday website made with love, memories, and our plans for
-          the cutest day ever.
+          A sweet little website full of memories, surprises, and our birthday timeline for today.
         </p>
       </section>
 
-      <section className="grid-section">
+      <section className="birthday-note-section">
         <article className="card card-large">
-          <p className="section-label">Birthday Wish</p>
-          <h2>Your message goes here</h2>
+          <p className="section-label">Birthday Note</p>
+          <h2>Your birthday message goes here</h2>
           <p className="card-text">
-            Replace this text with your real birthday message. Write something
-            sweet, personal, and emotional here about your friendship, how much
-            she means to you, and how excited you are for today.
+            Replace this with your real birthday message. Write something personal, emotional,
+            and cute about your friendship, your best memories together, and why she means so much to you.
           </p>
         </article>
-
-        <article className="card scratch-card">
-          <p className="section-label">Today’s Surprise Plan</p>
-          <h2>Scratch to reveal</h2>
-
-          <div className="plan-preview">
-            <div className="plan-item">
-              <span className="plan-time">9:00</span>
-              <div>
-                <h3>Epoxy Workshop</h3>
-                <p>Add location + little note here</p>
-              </div>
-            </div>
-
-            <div className="plan-item">
-              <span className="plan-time">After</span>
-              <div>
-                <h3>Butterfly Cafe</h3>
-                <p>Add location + little note here</p>
-              </div>
-            </div>
-          </div>
-        </article>
       </section>
 
-      <section className="places-section">
-        <div className="section-heading">
-          <p className="section-label">Our Birthday Stops</p>
-          <h2>Places for today</h2>
+      <section className="timeline-section">
+        <div className="timeline-header">
+          <p className="section-label">Birthday Timeline</p>
+          <h2>The plan for our day</h2>
         </div>
 
-        <div className="places-grid">
-          <article className="card place-card">
-            <div className="image-placeholder">Add place image here</div>
-            <h3>Epoxy Workshop</h3>
-            <p className="card-text">
-              Put the location, address, or Google Maps link here.
-            </p>
+        <div className="timeline-wrapper">
+          <div className="timeline-line" />
+
+          <article className="timeline-item timeline-item--left timeline-item--top">
+            <div className="timeline-card">
+              <p className="timeline-time">09:00 AM</p>
+              <h3>Epoxy Workshop</h3>
+             <p className="timeline-text">
+  Add the location here and a cute note like:
+  our first stop of the birthday day
+</p>
+            </div>
           </article>
 
-          <article className="card place-card">
-            <div className="image-placeholder">Add place image here</div>
-            <h3>Butterfly Cafe</h3>
-            <p className="card-text">
-              Put the location, address, or Google Maps link here.
-            </p>
+          <article className="timeline-item timeline-item--right timeline-item--middle">
+            <div className="timeline-card">
+              <p className="timeline-time">After</p>
+              <h3>Butterfly Cafe</h3>
+              <p className="timeline-text">
+                Add the location here and a note like:
+                cute coffee, food, photos, and birthday gossip ♡
+              </p>
+            </div>
           </article>
         </div>
       </section>
 
-      <section className="memories-section">
-        <div className="section-heading">
-          <p className="section-label">Through The Years</p>
-          <h2>Our memories</h2>
-        </div>
+    <section className="memories-section">
+  <div className="section-heading">
+    <p className="section-label">Through The Years</p>
+    <h2>Our memories</h2>
+  </div>
 
-        <div className="memories-grid">
-          <div className="memory-card tall">Add your photo here</div>
-          <div className="memory-card">Add your photo here</div>
-          <div className="memory-card">Add your photo here</div>
-          <div className="memory-card wide">Add your photo here</div>
-          <div className="memory-card">Add your photo here</div>
-        </div>
-      </section>
+  <div className="memories-collage">
+    <article className="memory-polaroid memory-polaroid--one">
+      <div className="memory-polaroid__image">Add photo 1 here</div>
+      <p className="memory-polaroid__caption">A favorite memory from us</p>
+    </article>
+
+    <article className="memory-polaroid memory-polaroid--two">
+      <div className="memory-polaroid__image">Add photo 2 here</div>
+      <p className="memory-polaroid__caption">Another moment to remember</p>
+    </article>
+
+    <article className="memory-polaroid memory-polaroid--three">
+      <div className="memory-polaroid__image">Add photo 3 here</div>
+      <p className="memory-polaroid__caption">One of our cutest photos</p>
+    </article>
+
+    <article className="memory-polaroid memory-polaroid--four">
+      <div className="memory-polaroid__image">Add photo 4 here</div>
+      <p className="memory-polaroid__caption">A day we never forgot</p>
+    </article>
+
+    <article className="memory-polaroid memory-polaroid--five">
+      <div className="memory-polaroid__image">Add photo 5 here</div>
+      <p className="memory-polaroid__caption">Another little memory</p>
+    </article>
+  </div>
+</section>
     </main>
   );
 }

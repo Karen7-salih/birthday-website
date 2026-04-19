@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import HeartsBackground from './HeartsBackground';
 
@@ -8,9 +7,6 @@ interface BirthdayIntroProps {
 }
 
 function BirthdayIntro({ onStart }: BirthdayIntroProps) {
-  const [showContent, setShowContent] = useState(false);
-  const [showButton, setShowButton] = useState(false);
-
   useEffect(() => {
     const duration = 1800;
     const end = Date.now() + duration;
@@ -33,19 +29,6 @@ function BirthdayIntro({ onStart }: BirthdayIntroProps) {
     };
 
     frame();
-
-    const contentTimer = window.setTimeout(() => {
-      setShowContent(true);
-    }, 700);
-
-    const buttonTimer = window.setTimeout(() => {
-      setShowButton(true);
-    }, 1300);
-
-    return () => {
-      window.clearTimeout(contentTimer);
-      window.clearTimeout(buttonTimer);
-    };
   }, []);
 
   const handleClick = () => {
@@ -68,38 +51,22 @@ function BirthdayIntro({ onStart }: BirthdayIntroProps) {
 
       <div className="intro-content">
         <div className="intro-text-block">
-          <motion.div
-            initial={false}
-            animate={{
-              opacity: showContent ? 1 : 0,
-              scale: showContent ? 1 : 0.985,
-            }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-          >
-            <p className="intro-mini-text">a little surprise for you</p>
+          <p className="intro-mini-text">a little surprise for you</p>
 
-            <h1 className="intro-main-title">
-              Happy Birthday
-              <span>Jojo</span>
-            </h1>
-          </motion.div>
+          <h1 className="intro-main-title">
+            Happy Birthday
+            <span>Jojo</span>
+          </h1>
         </div>
 
         <div className="intro-button-wrap">
-          <motion.button
+          <button
             type="button"
             className="intro-start-button"
             onClick={handleClick}
-            initial={false}
-            animate={{
-              opacity: showButton ? 1 : 0,
-              y: showButton ? 0 : 6,
-              pointerEvents: showButton ? 'auto' : 'none',
-            }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
           >
             Click here to start
-          </motion.button>
+          </button>
         </div>
       </div>
     </section>
